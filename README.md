@@ -1,9 +1,13 @@
 # profiler-program
 A program that checks if a variable has changed in a specific place in a program.
 To exectue, the program gets a few arguments:
+
   1+2: The specific segment in the code, via start and end addresses of the segment. Example: 400078 40007d
+  
   3+: The program you want to debug, include its arguments. Example: time 500
+  
   example to run the code:
+  
   ./profiler-program 400078 40007d program arg1 arg2
   
 Then, the program will get a collection of mappings in the format:
