@@ -8,7 +8,7 @@ To exectue, the program gets a few arguments:
   
   example to run the code:
   
-  ./profiler-program 400078 40007d program arg1 arg2
+    ./profiler-program 400078 40007d program arg1 arg2
   
 Then, the program will get a collection of mappings in the format-
  
@@ -37,13 +37,22 @@ Then, the program will get a collection of mappings in the format-
     run profile
 
 Assumptions:  
+
 We assume all the variables are saved in a register and not in addresses.
+
 The input is correct.
+
 Variable not longer than 256 characters.
+
 Variables are not mapped to the following registers: r8-r15, rdi, rbp, rsp (in the future might get changed about r8-r15 registers).
+
 We assume the variables are in their positive-signed range- MSB is always 0(might get changed in the future).
+
 Addresses in hexadecimal.
+
 The segment is eighter fully contain a loop or fully contained inside a loop.
+
 If there is an OP error- immediately exit with exit error of 1.
+
 The segment does not end with a jump/syscall/call/last command of the program.
 
