@@ -10,20 +10,31 @@ To exectue, the program gets a few arguments:
   
   ./profiler-program 400078 40007d program arg1 arg2
   
-Then, the program will get a collection of mappings in the format:
-  <var_name> <register>
-  <var_name> <register>
-  ...
-  run profile
+Then, the program will get a collection of mappings in the format-
+ 
+    <var_name> <register>
+ 
+    <var_name> <register>
+ 
+    ...
+ 
+    run profile
   
   While- 
+  
     var_name is the name of the variance we want to debug
+  
     register is the register the variance is mapped to
+  
     run profile is a command indicates the end of the input and to start the program
+  
   example:
-  i rcx
-  sum rax
-  run profile
+  
+    i rcx
+  
+    sum rax
+  
+    run profile
 
 Assumptions:  
 We assume all the variables are saved in a register and not in addresses.
